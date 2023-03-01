@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+
+    <body>
+        <h1>FUNDAMENTOS JAVASCRIPT</h1>
+        <h2>Párametros REST & Operador Spread</h2>
+        
+        <h4>Párametros REST</h4>
+        <pre> "Los parámetros" <em>Rest</em> "son una forma de utilizar parámetros virtualmente infinitos, se definen agregando
+             ... adelante del nombre del parámetro rest, éste tiene que ser siempre el último parámetro de la función."</pre>
+        <h4> Operador Spread</h4>
+             <pre> Permite que una expresión sea expandida en situaciones donde se esperan múltiples argumentos o elementos.</pre>
+        <script>
+        
+        /* **********     Curso JavaScript: 18. Párametros REST & Operador Spread - #jonmircha     ********** */
+        
+        function sumar (a,b,...c) {
+            let resultado = a + b;
+            
+            c.forEach(function(n) {
+                resultado += n
+            });
+            return resultado;
+        }
+        console.log(sumar(1,2));
+        console.log(sumar(1,2,3));
+        console.log(sumar(1,2,3,4))
+        console.log(sumar(1,2,3,4,5));
+        console.log(sumar(1,2,3,4,5,6));
+        console.log(sumar(1,2,3,4,5,6,7))
+        
+        
+        // Operador Spread
+        const arr1 = [1,2,3,4,5];
+        const arr2 = [6,7,8,9,0];
+        
+        console.log(arr1,arr2);
+
+        const arr3 = [...arr1,...arr2];
+
+        console.log(arr3);
+
+        </script>
+    </body>
+</html>

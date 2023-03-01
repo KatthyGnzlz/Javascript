@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+
+    <body>
+        <h1>FUNDAMENTOS JAVASCRIPT</h1>
+        <h2>Destructuración</h2>
+        
+        <pre>Nuevas formas de asignar valores a Arreglos y Objetos.</pre>
+        <script>
+        
+        /* **********     Curso JavaScript: 18. Destructuración - #jonmircha     ********** */
+        
+        const numeros = [1,2,3];
+        // sin destructuracion
+        let uno = numeros[0],
+            dos = numeros[1],
+            tres = numeros[2];
+           
+            console.log(uno, dos, tres);
+        
+        // con destructuracion    
+        const [one, two,three]  = numeros;
+        console.log(`con destructuración ${one} ${two} ${three}`);
+        
+        const persona = {
+            nombre: "Katthy",
+            apellido: "Gnzlz",
+            edad:27,
+            correo: "ka.gnzlz@gmail.com"
+        }
+
+        let { nombre, apellido, correo} = persona;
+        console.log(apellido, nombre, correo);
+
+        </script>
+    </body>
+</html>

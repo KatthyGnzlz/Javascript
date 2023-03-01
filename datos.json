@@ -1,0 +1,12 @@
+{
+    "cadena" : "Katthy",
+    "numero" : "28",
+    "booleano": "true", 
+    "arreglo": ["correr", "programar", "cocinar"],
+    "objeto" : { 
+        "twitter": "@jonmircha",
+        "email": "jonmircha@gmail.com"
+    },
+    "nulo": null 
+    
+}

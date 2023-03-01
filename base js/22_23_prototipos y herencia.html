@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+
+    <body>
+        <h1>FUNDAMENTOS JAVASCRIPT</h1>
+        <h2>PROTOTIPOS y HERENCIA PROTOTÍPICA</h2>
+        
+        <script>
+            /* **********     Curso JavaScript: 22. Prototipos - #jonmircha y Curso JavaScript: 23. Herencia - #jonmircha     ********** */
+            // POO PROGRAMACION ORIENTADA A OBJETOS
+                /*
+                Clases  - Modelo a seguir
+                Objetos - Es una instancia de una clase
+                    Atributos   - Es una característica o propiedad del
+                        objeto(son variables de un objeto)
+                    Métodos     - Son las acciones que un objeto puede
+                        realizar (son funciones dentro de un objeto)
+
+                */
+                /* 
+                PROTOTIPOS
+                    Es un mécanico por el cual un objeto puede heredar
+                        propia atributos y métodos de un objeto padre
+                */
+               
+                /*const animal = {
+                    nombre: "Snoopy",
+                    sonar() {
+                        console.log("Hago sonidos por que estoy vivo");
+                    }
+                }
+
+                const animal2 = {
+                    nombre: "Lola Bunny",
+                    sonar() {
+                        console.log("Hago sonidos por que estoy vivo");
+                    }
+                }
+
+                console.log(animal);
+                console.log(animal2);*/
+
+
+                // Funcion Constructora
+                // function Animal (nombre, genero) {
+                //     // Atributos
+                //     this.nombre = nombre;
+                //     this.genero = genero;
+
+                //     // métodos
+                //     this.sonar = function() {
+                //         console.log("Hago sonido por que estoy vivo")
+                //     }
+                //     this.saludar = function() {
+                //         console.log(`Hola, me llamo ${this.nombre}`);
+                //     }
+                // }
+
+                // Funcion Constructora donde asignamos los métodos al Prototipo; no a la funcion
+                function Animal (nombre, genero) {
+                    // Atributos
+                    this.nombre = nombre;
+                    this.genero = genero;
+
+                                          
+                }
+                    // Métodos agrgados al prototipos de la funcion constructora
+                Animal.prototype.sonar = function() {
+                    console.log("Hago sonido por que estoy vivo")
+                }
+                Animal.prototype.saludar = function() {
+                    console.log(`Hola, me llamo ${this.nombre}`);
+                } 
+
+                //  Herencia Prototípica
+                function Perro (nombre, genero, tamanno) {
+                    this.super = Animal;
+                    this.super(nombre, genero);
+                    this.tamanno = tamanno;
+                }
+
+                // Perro está heredando de Animal
+                Perro.prototype = new Animal();
+                Perro.prototype.constructor = Perro;
+
+                // Sobreescritura de metodos de prototipo padre  en el hijo
+                Perro.prototype.sonar =function () {
+                    console.log ("Soy un perro y mi sonido es un ladrido");
+                }
+                
+                Perro.prototype.ladrar = function() {
+                    console.log("Guauu Guauu!!!");
+                }
+
+                const snoopy = new Perro("Snoopy", "Macho","Mediano"),
+                    lolaBunny = new Animal("Lola Bunny", "Hembra");
+
+                console.log(snoopy);
+                console.log(lolaBunny);    
+                
+                snoopy.saludar();
+                snoopy.sonar();
+                snoopy.ladrar();
+
+                lolaBunny.saludar();
+                 lolaBunny.sonar();           
+                 
+                 
+                
+
+        </script>
+    </body>
+</html>

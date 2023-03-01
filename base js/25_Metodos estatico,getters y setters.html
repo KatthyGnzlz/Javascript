@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+
+    <body>
+        <h1>FUNDAMENTOS JAVASCRIPT</h1>
+        <h2>MÉTODOS ESTÁTICOS, GETTERS Y SETTERS</h2>
+        
+        <h4>MÉTODO ESTÁTICO</h4>
+        <pre>
+            Es un método que se puede ejecutar sin necesidad de instanciar la clase.
+        </pre>
+
+        <h4> GETTERS Y SETTERS</h4>
+        <pre>
+            Los Setters y Getters son métodos epeciales que nos permiten establecer y 
+            obtener los valores de atributos de nuestra clase. 
+        </pre>
+        
+        <script>
+            /* **********     Curso JavaScript: 25. Métodos estáticos, Getters y Setters - #jonmircha     ********** */
+            // POO PROGRAMACION ORIENTADA A OBJETOS
+            
+            
+            class Animal {
+                //El Constructor es un método especial que se ejecuta en el momento de instanciar la clase
+                constructor(nombre, genero) {
+                    this.nombre = nombre;
+                    this.genero = genero;
+                }
+
+                sonar () {
+                    console.log("HAgo sonido por que estoy vivo");
+                }
+                saludar() {
+                    console.log(`Hola me llamo ${this.nombre}`);
+                }
+            }
+
+            class Perro extends Animal{
+                constructor(nombre,genero,tamanio){
+                    // El método super() se manda a llamar el constructor de la clase padre
+                    super(nombre,genero);
+                    this.tamanio = tamanio;
+                    this.raza = null;
+                }
+
+                sonar() {
+                    console.log("Soy un perro, y mi sonido es un ladrido");
+                }
+
+                ladrar() {
+                    console.log("GUAUUU GUAUUU!!!");
+                }
+
+                // metodo estático
+                static queEres(){
+                    console.log("Los perros son animales mamíferos que pertenecen a la familia de los caninos. Son considerados los mejores amigos del hombre.");
+                }
+
+                // getters  y setters
+                get getRaza() {
+                    return this.raza;
+                }
+                set setRaza(raza) {
+                    this.raza = raza;
+                }
+
+            }
+
+            Perro.queEres();
+
+            const mimi = new Animal("Mimi", "Hembra"),
+                neron = new Perro("Neron","Macho","Grande");
+
+            console.log(mimi);
+            mimi.saludar();
+            mimi.sonar();
+            console.log(neron);
+            neron.saludar();
+            neron.sonar();
+            neron.ladrar();
+            console.log(neron.getRaza);
+            neron.setRaza = "Pastor Australiano"; 
+            console.log(neron.getRaza);   
+
+
+        </script>
+    </body>
+</html>

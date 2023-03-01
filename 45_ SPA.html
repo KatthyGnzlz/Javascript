@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SPA</title>
+        <link rel="stylesheet" href="css/api_ rest_prism.css">
+        <link rel="stylesheet" href="css/api_rest_style.css">
+    </head>
+
+    <body>
+        <h1 style="margin: 1.5rem;">SPA: Single Page Application</h1>
+
+        <article style="margin: 1.5rem;" class="post-content">
+         
+            <h2 id="single-page-application"><em>Single Page Application</em></h2>
+
+            <p>Una <em><strong>SPA</strong></em> o Aplicación de una Sola Página es una <em>web</em> que todo su contenido carga una sola vez, es decir, tu navegador descarga un sólo archivo <em>html</em> con todos los recursos y dependencias que necesite para funcionar: estilos, <em>scripts</em>, imágenes, fuentes, etc.</p>
+            
+            <p>Una vez que carga todo el contenido de la aplicación la navegación de esta suele ser muy rápida y fluida, pues el contenido ya ha sido previamente cargado y sólo estamos intercambiando contenido a través de las interacciones del usuario.</p>
+
+            <p>Dependiendo de la complejidad y robustez de la aplicación también podría cargarse contenido de forma dinámica sin la necesidad de recargar la página y sí, como seguramente lo estas pensando esto se hace mediante <a href="/javascript-asincrono">peticiones asíncronas</a> con <a href="/ajax"><em>AJAX</em></a> de tal manera que sólo se tiene que cargar el nuevo contenido.</p>
+
+            <br>
+
+            <h3 id="rutas-en-una-spa">Rutas en una SPA</h3>
+
+            <p>En una <em><strong>SPA</strong></em> tenemos <strong>vistas</strong>, NO páginas. Las vistas son las diferentes secciones o apartados de contenido que tiene la aplicación y al no tener que cambiar de ruta para acceder al contenido, la carga suele ser muy rápida.</p>
+
+            <br>
+
+            <p><strong>¿Entonces si el contenido se carga en una sóla página, la <em>url</em> no cambia?</strong></p>
+
+            <br>
+
+            <p>Por funcionalidad quizas <strong>NO</strong> sería necesario que cambiáse la <em>url</em>, pero por usabilidad es una muy buena opción que <strong>SI</strong> cambie, ya que el navegador va guardando en su historial todas las páginas (en este caso todas las vistas) que el usuario va visitando, lo que podría permitir al usuario regresar o adelantar vistas a través de los botones de atrás y adelante de su navegador <em>web</em>.</p>
+
+            <p>También piensa en la posibilidad que existe de que el usuario en vez de navegar por la aplicación para llegar a un contenido en particular, decida acceder a este a través de una <em>url</em> que decida escribir manualmente en la barra de dirección de su navegador web, si no implementas un sistema de rutas esto podría ser un gran problema de accesibilidad en el contenido de tu <em><strong>SPA</strong></em>.</p>
+
+            <br>
+
+            <p><strong>Pero si el contenido se carga en una sóla página, ¿cómo cambiamos la <em>url</em>?</strong></p>
+
+            <p>Gracias al uso del <em>hash</em> de la <em>url</em> y el paso de parámetros en la misma 😉🤓😎.</p>
+
+            <br>
+
+            <h3 id="¿y-el-seo-en-una-spa">¿Y el <em>SEO</em> en una <em>SPA</em>?</h3>
+
+            <p>Si bien, acabamos de explicar que podemos cambiar la <em>url</em> mediante el paso de parámetros y el <em>hash</em> de la misma, es un hecho que este tipo de cambios en la <em>url</em> no es muy amigable y como tal siempre hacemos referencia al mismo archivo que carga toda la aplicación.</p>
+
+            <p>Además hay que considerar que la mayoria del contenido de una <em><strong>SPA</strong></em> se carga de forma dinámica, por lo que los mecanismos que tienen los buscadores para analizar el código <em>HTML</em> de las <em>urls</em> prácticamente son inservibles, pues en su mayoría, las <em><strong>SPAs</strong></em> tienen un sólo <em>tag</em> <em>HTML</em> vacío con un nombre de identificador y mediante <em>JavaScript</em>, el contenido es cargado asíncronamente a dicho <em>tag</em>.</p>
+
+            <p>Por lo anterior el código <em>HTML</em> de nuestra <em><strong>SPA</strong></em> estaría vacío ante los rastreadores de los buscadores, encargados de posicionar el contenido en la <em>web</em>.</p>
+
+            <p>Pero no te preocupes 😬 no todo esta perdido, si bien las <em><strong>SPAs</strong></em> no son tan amigables con el <em>SEO</em>, lo cierto es que en los últimos años los mismos buscadores han implementado mecanismos en sus rastreadores para detectar el código <em>HTML</em> generado por una <em><strong>SPA</strong></em>.</p>
+
+            <p>Adicionalmente tenemos 2 técnicas para volver más <em>SEO friendly</em> a nuestras <em><strong>SPAs</strong></em>:</p>
+
+            <ol>
+                <li>Los Generadores de Sitios Estáticos (<em><strong>SSG - Static Site Generators</strong></em>) y</li>
+                <li>El Renderizado del Lado del Servidor (<em><strong>SSR - Server Side Rendering</strong></em>).</li>
+            </ol>
+
+            <p>Pero de estas dos estrategias hablaré en otra ocasión.</p>
+
+            <br>
+
+            <h3 id="¿en-qué-se-programa-una-spa">¿En qué se programa una <em>SPA</em>?</h3>
+
+            <p>Las <em><strong>SPAs</strong></em> se desarrollan en <a href="/javascript"><em>JavaScript</em></a>, como son aplicaciones <em>web</em> 100% hechas con código <em>frontend</em>, es el único lenguaje en el que se pueden programar. También necesitaremos <em>HTML</em> para el marcado del contenido y <em>CSS</em> para su presentación.</p>
+
+            <br>
+
+            <p><strong>Pero si el código de una <em>SPA</em> es 100% <em>frontend</em> ¿qué pasa con el código <em>backend</em> que proporciona los datos?</strong></p>
+
+            <br>
+
+            <p>El código <em>backend</em> que provee los datos a una <em><strong>SPA</strong></em>, es 100% independiente de esta. De hecho a la <em><strong>SPA</strong></em> le importa poco en qué lenguaje este programado su <em>backend</em> o que reglas, patrones, estructuras o técnicas use internamente, mientras este le proporcione los datos en una <a href="/api-rest"><em>API</em></a> expuesta generalmente en formato <a href="/json"><em>JSON</em></a> es todo lo que la <em><strong>SPA</strong></em> necesita de un <em>backend</em>.</p>
+
+            <p>Con lo anterior expuesto, significa que si decides desarrollar un proyecto bajo el paradigma de las <em><strong>SPAs</strong></em> puedes programar de forma independiente el <em>frontend</em> del <em>backend</em> y sólo conectarlos a través de la <a href="/api-rest"><em>API</em></a> que los comuniqué entre sí.</p>
+
+            <p>De esta forma puedes mantener mayor control e independencia de desarrollo entre cada una de las partes de código (<em>frontend</em> y <em>backend</em>) de todo tu proyecto.</p>
+
+            <p>De hecho en los últimos años el paradigma de desarrollo de las <em><strong>SPAs</strong></em> le ha ido ganando terreno al patrón de desarrollo <em><strong>MVC</strong></em> (Modelo - Vista - Controlador) que fue muy popular en los inicios de la <em>web</em>, en este paradigma el <em>frontend</em> y <em>backend</em> estan mezclados y con mucha dependencia entre sí, además quien llevaba la mayor responsabilidad era el <em>backend</em> y generalmente con cada nueva acción en la aplicación implicaba volver a solicitar los datos al servidor lo que implicaba una recarga al navegador, y por ende una nueva petición por cada acción ejecutada.</p>
+
+            <p>Con la llegada de <a href="/ajax"><em>AJAX</em></a> el tema de las recargas al servidor se solucionó, sin embargo la codependencia y mezcla entre código <em>frontend</em> y <em>backend</em> sigue ocurriendo en el paradigma <em><strong>MVC</strong></em>.</p>
+
+            <p>Actualmente con el avance que ha tenido <a href="/ecmascript"><em>JavaScript</em></a> como lenguaje y la proliferación de librerías y <em>frameworks</em> que se basan en él, sumado a las nuevas formas de almacenar y consumir información en la <em>web</em> como el cómputo en la nube y el desarrollo de microservicios en la misma; el paradigma de las <em><strong>SPAs</strong></em> cada vez gana mayor aceptación frente al <em><strong>MVC</strong></em>, gracias a que permite desarrollar de forma autónoma e independiente cada parte de código de nuestra aplicación: <em>frontend</em>, <em>backend</em> y persistencia de datos desacoplados y descentralizados de sí mismos.</p>
+
+            <br>
+
+            <h3 id="librerías-y-frameworks-para-spas">Librerías y <em>Frameworks</em> para <em>SPAs</em></h3>
+
+            <p>Desde el 2010 con el surgimiento de proyectos como <em>Angular.js</em>, <em>Backbone.js</em> y <em>Ember.js</em> que comenzaban a tratar de darle más protagonismo al desarrollo <em>frontend</em> más allá de la simple manipulación del <a href="/dom"><em>DOM</em></a> que nos ofrecía en su momento <em>jQuery</em>, comenzó el camino de la arquitectura basada en <em><strong>SPAs</strong></em>, podemos considerar a estas herramientas la primera generación de librerías y <em>frameworks</em> <em><strong>SPAs</strong></em>.</p>
+
+            <p>Posteriormente y a partir del 2013 con el surgimiento de herramientas como <em>React</em>, <em>Angular</em>, <em>Polymer</em>, <em>Vue</em> y <em>Svelte</em> que integran nuevos conceptos al ecosistema <em>frontend</em> como: el desarrollo basado en componentes, el manejo del estado, la reactividad, entre otros podemos considerar a estos proyectos como la segunda generación de librerías y <em>frameworks</em> <em><strong>SPAs</strong></em>.</p>
+
+            <p>Así que como puedes ver, tienes una gran variedad de opciones a escoger.</p>
+
+            <p  style=" text-align: center">
+                <img src="assets/arquitectura-spa.png" alt="Arquitectura SPA">
+            </p>
+
+            <hr>
+
+            <h3 id="creando-una-spa">Creando una <em>SPA</em></h3>
+
+            <p>A continuación encontrarás una lista de videos donde te enseño a desarrollar una <em>SPA</em> desde cero con <em>Vanilla JavaScript</em>, es decir, sin usar <em>frameworks</em> o librerías externas, la programaremos únicamente con todo el poder que nos brinda nuestro querido y poderoso lenguaje de programación: <em>JavaScript</em> 🤗💛.</p>
+
+            <ol>
+                <li><a href="https://youtube.com/watch?v=5ukeeimOFLU&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Introducción a las <em>Single Page Applications</em></a>.</li>
+                <li><a href="https://youtube.com/watch?v=jLMyWvZIhB4&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Estructura de Proyecto: <em>assets</em>, <em>helpers</em> y <em>components</em></a>.</li>
+                <li><a href="https://youtube.com/watch?v=VUbKdpVQKDU&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener"><em>Helper</em> de conexión a <em>API REST</em></a>.</li>
+                <li><a href="https://youtube.com/watch?v=Ovuy9Bj5AtU&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener"><em>Helper</em> de peticiones <em>AJAX</em></a>.</li>
+                <li><a href="https://youtube.com/watch?v=w0djekE6NR8&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Primeros Componentes de <em>UI</em></a>.</li>
+                <li><a href="https://youtube.com/watch?v=rY8k7-Jm8ws&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Componente <em>Header</em></a>.</li>
+                <li><a href="https://youtube.com/watch?v=6WZ_C4iXhWA&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Renderizado Dinámico</a>.</li>
+                <li><a href="https://youtube.com/watch?v=nC9WK4jFXls&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Enrutamiento: <em>Router</em> de la <em>App</em></a>.</li>
+                <li><a href="https://youtube.com/watch?v=keGWjiUJ3V4&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Refactorización de la <em>App</em>. Enrutamiento Asíncrono</a>.</li>
+                <li><a href="https://youtube.com/watch?v=cuQivOPJJ7M&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Vista de <em>Post</em> Actual</a>.</li>
+                <li><a href="https://youtube.com/watch?v=0SwwbsMZGrc&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Buscador Interno de la <em>App</em></a>.</li>
+                <li><a href="https://youtube.com/watch?v=1MAUA1lZPyM&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Vista de la Búsqueda Actual</a>.</li>
+                <li><a href="https://youtube.com/watch?v=XEf5jW9Y9oE&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener"><em>Infinite Scroll &amp; High Order Components</em></a>.</li>
+                <li><a href="https://youtube.com/watch?v=MWrqhpGF6tU&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener"><em>Styled Components &amp; Single File Components</em></a>.</li>
+            </ol>
+
+        </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <script>
+            /* **********     Curso JavaScript: 23. Herencia - #jonmircha     ********** */
+            
+            
+            
+
+
+        </script>
+    </body>
+</html>

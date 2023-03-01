@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+
+    <body>
+        <h1>FUNDAMENTOS JAVASCRIPT</h1>
+        <h2>FUNCIONES ANÓNIMAS AUTOEJECUTABLES</h2>
+        
+        <script>
+            /* **********     Curso JavaScript: 32. Funciones Anónimas Autoejecutables - #jonmircha     ********** */
+            // Funciones Anónimas Autoejecutables 
+
+            (function (){
+                console.log("Mi primer IIFE");
+            })();
+
+            (function(d,w,c) {
+                console.log("Mi Segunda IIFE");
+                console.log(d);
+                console.log(w);
+                c.log("este es un console.log")
+            })(document, window, console);
+           
+            // Formas de escribir las funciones Anónimas Autoejecutables
+            // Clásica
+            (function() {
+                console.log("Version Clásica");
+            })();
+
+            //  La Crockford (JavaScrip The Good Parts)
+            ((function() {
+                console.log("Versión Crockford");
+            })());
+
+            // Unaria
+            +function() {
+                console.log("Version Unaria");
+            }();
+
+            // Facebook
+            !function() {
+                console.log("Version Facebook");
+            }();
+
+        </script>
+    </body>
+</html>

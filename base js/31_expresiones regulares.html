@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+
+    <body>
+        <h1>FUNDAMENTOS JAVASCRIPT</h1>
+        <h2>EXPRESIONES REGULARES</h2>
+        
+        <h4> Expresiones Regulares</h4>
+        
+        <pre>
+            es una secuencia caracteres que forman un patron de busqueda 
+            y es principalmente utilizado en la busqueda patrones de cadenas de caracteres.
+        </pre>
+
+        <a href="https://es.wikipedia.org/wiki/Expresi%C3%B3n_regular"></a>
+        <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Guide/Regular_Expressions"></a>
+
+        <script>
+            /* **********     Curso JavaScript: 31. Expresiones Regulares - #jonmircha     ********** */
+            // POO PROGRAMACION ORIENTADA A OBJETOS
+           
+            let cadena = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem fuga cupiditate dolores saepe, praesentium sit eaque recusandae id sapiente similique, laudantium voluptatum perferendis ea iure ad odio doloremque earum voluptate.";
+            
+            // let expReg = new RegExp("lorem","ig");
+            // console.log(expReg.test(cadena));
+            // console.log(expReg.exec(cadena));
+            
+            
+            let expReg2 = /lorem{2,}/ig;
+            console.log(expReg2.test(cadena));
+            console.log(expReg2.exec(cadena));
+
+
+        </script>
+    </body>
+</html>

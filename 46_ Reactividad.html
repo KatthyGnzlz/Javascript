@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos React</title>
+    </head>
+
+    <body>
+        <h1>Reactividad en JavaScript</h1>
+        
+        <article class="post-content">
+            <hr>
+            <p>
+                Para comprender el paradigma de la programación reactiva en <em>JavaScript</em> y entender cómo es que funcionan internamente librerías y <em>frameworks</em> como <em>React</em>, <em>Angular</em>, <em>Vue</em>, <em>Svelte</em>, <em>Polymer</em>, etc; es necesario comprender algunos conceptos importantes:
+            </p>
+            <h4 id="reactividad">Reactividad</h4>
+            
+            <p>
+                La reactividad de los datos, simplemente es que la interfaz de usuario de un sitio o aplicación se modifica a los cambios en los datos de la misma.
+            </p>
+            <p>Cada vez que se actualizan los datos, la interfaz de usuario lo hace automáticamente para que coincida con la lógica de programación de la aplicación.
+
+            </p>
+            <h4 id="estado">Estado</h4>
+            <p>
+                El estado son los datos de tu aplicación.</p>
+            <p>
+                Entonces, ¿por qué se le llama estado en lugar de datos?</p>
+            <p>
+                Porque tiene una duración determinada, el estado son datos en un momento particular de la aplicación, por ello decimos: <em><strong>el estado actual de los datos de la aplicación</strong></em>.
+            </p>
+            <h4 id="interfaz-basada-en-el-estado">Interfaz basada en el estado</h4>
+            <p>
+                Una interfaz basada en el estado, es aquella que usa los datos de la aplicación en todo momento para pintar su elementos visuales.</p>
+            <p>
+                Los elementos visuales de la interfaz suelen llamarse componentes.
+
+            </p>
+            <h4 id="componentes">Componentes</h4>
+            <p>
+                Para definir el término componente citaré la definición de <em>Nicole Sullivan</em> que dice:
+            </p>
+            <blockquote>
+                <p><em>
+                    “It's a repeating visual pattern, that can be abstracted into an independent snippet of HTML, CSS and possibly JavaScript.” <a href="https://youtube.com/watch?v=lsaG-EJcu88" target="_blank" rel="noopener">Nicole Sullivan</a></em>.
+                </p>
+            </blockquote>
+            <p>Traduciendo:</p>
+            <p>
+                Es un patrón visual repetido, que se puede resumir en un fragmento independiente de <em>HTML</em>, <em>CSS</em> y posiblemente <em>JavaScript</em>.
+            </p>
+            <p>Los componentes:</p>
+            <ul>
+                <li>Son un fragmento de la interfaz que cumple una única función.</li>
+                <li>Son reutilizables ( principio <em>DRY</em> - <em>Don´t Repeat Yourself</em> ).</li>
+                <li>Son independientes, tanto de su contexto como del resto de componentes.</li>
+                <li>Son autocontenidos, no filtran estilos o funcionalidad a otros componentes.</li>
+            </ul>
+            <h4 id="programación-reactiva-orientada-a-componentes">Programación Reactiva orientada a Componentes</h4>
+            <p>
+                Con lo descrito anteriormente podemos decir que una aplicación reactiva y basada en componentes nos permiten separar el código y los elementos de la interfaz en pequeñas piezas independientes y reutilizables que estarán aisladas una de otras, y en lugar de intentar apuntar y manipular directamente los elementos del <em>DOM</em> cuando la aplicación <strong>reaccioné</strong> a las acciones del usuario, ésta actualizará su estado y luego la interfaz se repintará con los cambios en el estado.
+            </p>
+            <p>
+                Déjame mostrarte como funciona esto con <em>Vanilla JS</em> 🤓💛.
+            </p>
+            <hr>            
+            <h3 id="entendiendo-la-reactividad">Entendiendo la Reactividad</h3>
+            <p>
+                A continuación encontrarás una lista de videos donde te enseño a implementar reactividad con <em>Vanilla JavaScript</em>, es decir, sin usar <em>frameworks</em> o librerías externas, lo haremos únicamente con todo el poder que nos brinda nuestro querido y poderoso lenguaje de programación: <em>JavaScript</em> 🤗💛.
+            </p>
+            <ol>
+                <li><a href="https://youtube.com/watch?v=RWTLqdS5vTo&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Reactividad en <em>JavaScript</em></a>.</li>
+                <li><a href="https://youtube.com/watch?v=zZvmp6V2fCo&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Manipulación NO Reactiva del <em>DOM</em></a>.</li>
+                <li><a href="https://youtube.com/watch?v=09Vx4IzPAQE&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Interfaz de Usuario (<em>UI</em>) basada en el Estado</a>.</li>
+                <li><a href="https://youtube.com/watch?v=yYyC2bE_q9o&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Estado Reactivo</a>.</li>
+                <li><a href="https://youtube.com/watch?v=LhEY3heuDzs&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Estado Inmutable</a>.</li>
+                <li><a href="https://youtube.com/watch?v=fdr5Wprx-vE&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Componentes con Estado</a>.</li>
+                <li><a href="https://youtube.com/watch?v=n_tKs1yyfBo&amp;list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Programando una Librería para crear Componentes con Estado</a>.</li>
+                </ol>
+            <p>Esta lista de videos forma parte de mi <a href="https://youtube.com/playlist?list=PLvq-jIkSeTUZ6QgYYO3MwG9EMqC-KoLXA" target="_blank" rel="noopener">Curso de <em>JavaScript</em></a> en <em>YouTube</em>.</p>
+            <p>Si quieres aprender <em>JavaScript</em> de una forma más estructurada, a tu propio ritmo y totalmente gratis, te sugiero vayas a mi iniciativa <a href="https://aprendejavascript.org" target="_blank" rel="noopener">Aprende<em>JavaScript</em>.org</a> y comienza ya tu carrera profesional como desarrollador <em>web</em> 🤓💛.</p>
+            <hr>
+        </article>
+
+        
+        <script>
+            /* **********     Curso JavaScript: 23. Herencia - #jonmircha     ********** */
+            
+            
+            
+
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fundamentos JavaScript</title>
+    </head>
+
+    <body>
+        <h1>FUNDAMENTOS JAVASCRIPT</h1>
+        <h2>OPERADOR DE CORTOCIRCUITO</h2>
+        
+        <h4>
+            CORTOCIRCUITO OR
+        </h4>
+        <pre>
+            cuando el valor de la izquierda en la expresión siempre pueda validar a true,
+            es el valor que se cargará por defecto
+        </pre>
+
+        <h4>
+            CORTOCIRCUITO AND
+        </h4>
+
+        <pre>
+            cuando el valor de la izquierda en la expresión siempre pueda validar a false,
+            es el valor que se cargará por defecto
+        </pre>
+
+
+        <script>
+            /* **********     Curso JavaScript: 29. OPERADOR DE CORTOCIRCUITO - #jonmircha     ********** */
+            // POO PROGRAMACION ORIENTADA A OBJETOS
+            // 
+        
+            function saludar(nombre) {
+                nombre = nombre || "Desconocido";
+                console.log(`Hola ${nombre}`);
+            }
+            console.log();
+
+            saludar("Katthy");
+            saludar();
+            // OPERADOR OR
+            console.group("OPERADOR OR");
+            console.log("cadena" || "Valor de la derecha");
+            console.log(19 || "Valor de la derecha");
+            console.log(true || "Valor de la derecha");
+            console.log([] || "Valor de la derecha");
+            console.log({} || "Valor de la derecha");
+            console.log(false || "Valor de la derecha");
+            console.log(null || "Valor de la derecha");
+            console.log(undefined || "Valor de la derecha");
+            console.log("" || "Valor de la derecha");
+            console.log(-2 || "Valor de la derecha");
+            console.log(0 || "Valor de la derecha");
+            console.groupEnd();
+
+            // 
+            console.group("OPERADOR AND");
+            console.log(false && "Valor de la derecha");
+            console.log(null && "Valor de la derecha");
+            console.log(undefined && "Valor de la derecha");
+            console.log("" && "Valor de la derecha");
+            console.log(-2 && "Valor de la derecha");
+            console.log(0 && "Valor de la derecha");
+            console.log("cadena" && "Valor de la derecha");
+            console.log(19 && "Valor de la derecha");
+            console.log(true && "Valor de la derecha");
+            console.log([] && "Valor de la derecha");
+            console.log({} && "Valor de la derecha");
+            console.groupEnd();
+       
+        </script>
+    </body>
+</html>
